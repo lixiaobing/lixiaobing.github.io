@@ -69,4 +69,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-#  repo: https://github.com/lixiaobing/lixiaobing.github.io
+  repo: https://github.com/lixiaobing/lixiaobing.github.io
+branch: master
+message: deplop
