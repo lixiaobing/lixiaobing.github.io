@@ -1,7 +1,7 @@
 ---
 title: vim使用（基础篇）
 date: 2017-04-27 17:09:05
-tags: vim,vi
+tags: vim
 ---
 
 
