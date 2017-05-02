@@ -1,12 +1,9 @@
 ---
-title: about
+title: vim使用（基础篇）
 date: 2017-04-27 17:09:05
-tags:
+tags: vim,vi
 ---
 
-# vim 使用基础篇
-
----
 
 > 本文介绍vim的基础使用方法
 > 模式切换
