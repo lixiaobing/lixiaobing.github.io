@@ -4,10 +4,15 @@ date: 2017-05-02 15:33:52
 tags: git
 ---
 
+前言
+我们在使用git管理我们的代码和资源时候，经常会碰到一些文件或者目录不能提交到版本库，
+但是项目里又不的没有这些文件或目录（待续...）
+
+
 
 ## 环境
 
-系统	elementary OS 0.4 Loki
+linux elementary OS 0.4 Loki
 git version 2.7.4
 
 
