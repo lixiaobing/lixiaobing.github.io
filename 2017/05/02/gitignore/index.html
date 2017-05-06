@@ -5,17 +5,17 @@
   
   <title>git如何忽略文件 | 我的BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言我们在使用git管理我们的代码和资源时候，经常会碰到一些文件或者目录不能提交到版本库，但是项目里又不的没有这些文件或目录（待续…） 环境linux elementary OS 0.4 Lokigit version 2.7.4 忽略文件的几种方法[方法一] 配置.gitignore 在仓库目录下新建.gitignore文件1$ touch .gitignore 编辑 .gitignore 文件">
+  <meta name="description" content="我们在使用git管理我们的代码工程，有时有的文件是不希望上传到版本库的，如项目编译生成的临时文件或调试时的配置等等，每次commit 的时候都需要把这些文件排除在外，非常麻烦。其实我们可以吧这写文件忽略掉，本文介绍几种忽略文件的方法  环境linux elementary OS 0.4 Lokigit version 2.7.4 [方法一] 配置.gitignore在仓库目录下新建.gitign">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git如何忽略文件">
 <meta property="og:url" content="https://lixiaobing.github.io/2017/05/02/gitignore/index.html">
 <meta property="og:site_name" content="我的BLOG">
-<meta property="og:description" content="前言我们在使用git管理我们的代码和资源时候，经常会碰到一些文件或者目录不能提交到版本库，但是项目里又不的没有这些文件或目录（待续…） 环境linux elementary OS 0.4 Lokigit version 2.7.4 忽略文件的几种方法[方法一] 配置.gitignore 在仓库目录下新建.gitignore文件1$ touch .gitignore 编辑 .gitignore 文件">
-<meta property="og:updated_time" content="2017-05-05T09:23:42.596Z">
+<meta property="og:description" content="我们在使用git管理我们的代码工程，有时有的文件是不希望上传到版本库的，如项目编译生成的临时文件或调试时的配置等等，每次commit 的时候都需要把这些文件排除在外，非常麻烦。其实我们可以吧这写文件忽略掉，本文介绍几种忽略文件的方法  环境linux elementary OS 0.4 Lokigit version 2.7.4 [方法一] 配置.gitignore在仓库目录下新建.gitign">
+<meta property="og:updated_time" content="2017-05-06T02:21:35.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git如何忽略文件">
-<meta name="twitter:description" content="前言我们在使用git管理我们的代码和资源时候，经常会碰到一些文件或者目录不能提交到版本库，但是项目里又不的没有这些文件或目录（待续…） 环境linux elementary OS 0.4 Lokigit version 2.7.4 忽略文件的几种方法[方法一] 配置.gitignore 在仓库目录下新建.gitignore文件1$ touch .gitignore 编辑 .gitignore 文件">
+<meta name="twitter:description" content="我们在使用git管理我们的代码工程，有时有的文件是不希望上传到版本库的，如项目编译生成的临时文件或调试时的配置等等，每次commit 的时候都需要把这些文件排除在外，非常麻烦。其实我们可以吧这写文件忽略掉，本文介绍几种忽略文件的方法  环境linux elementary OS 0.4 Lokigit version 2.7.4 [方法一] 配置.gitignore在仓库目录下新建.gitign">
   
     <link rel="alternate" href="/atom.xml" title="我的BLOG" type="application/atom+xml">
   
@@ -86,17 +86,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>前言<br>我们在使用git管理我们的代码和资源时候，经常会碰到一些文件或者目录不能提交到版本库，<br>但是项目里又不的没有这些文件或目录（待续…）</p>
+        <blockquote>
+<p>我们在使用git管理我们的代码工程，有时有的文件是不希望上传到版本库的，如项目编译生成的临时文件或调试时的配置等等，每次commit 的时候都需要把这些文件排除在外，非常麻烦。其实我们可以吧这写文件忽略掉，本文介绍几种忽略文件的方法</p>
+</blockquote>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>linux elementary OS 0.4 Loki<br>git version 2.7.4</p>
-<h2 id="忽略文件的几种方法"><a href="#忽略文件的几种方法" class="headerlink" title="忽略文件的几种方法"></a>忽略文件的几种方法</h2><p>[方法一] 配置.gitignore</p>
-<p>在仓库目录下新建.gitignore文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ touch .gitignore</div></pre></td></tr></table></figure></p>
+<h2 id="方法一-配置-gitignore"><a href="#方法一-配置-gitignore" class="headerlink" title="[方法一] 配置.gitignore"></a>[方法一] 配置.gitignore</h2><p>在仓库目录下新建.gitignore文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ touch .gitignore</div></pre></td></tr></table></figure></p>
 <p>编辑 .gitignore 文件增加忽略项<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim .gitignore</div></pre></td></tr></table></figure></p>
+<blockquote>
 <p>.gitignore文件对其所在的目录及所在目录的全部子目录均有效。通过将.gitignore文件添加到仓库，<br>其他开发者更新该文件到本地仓库，以共享同一套忽略规则</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lixiaobing.github.io/2017/05/02/gitignore/" data-id="cj2clli3l0000cttzv7bkx1ra" class="article-share-link">Share</a>
+      <a data-url="https://lixiaobing.github.io/2017/05/02/gitignore/" data-id="cj2cn8j720000k0tzmp6xe1we" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
