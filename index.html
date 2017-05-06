@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>我的BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="我的BLOG">
+<meta property="og:url" content="https://lixiaobing.github.io/index.html">
+<meta property="og:site_name" content="我的BLOG">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的BLOG">
+  
+    <link rel="alternate" href="/atom.xml" title="我的BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">我的BLOG</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://lixiaobing.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-gitignore" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/02/gitignore/" class="article-date">
+  <time datetime="2017-05-02T07:33:52.000Z" itemprop="datePublished">2017-05-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/02/gitignore/">git如何忽略文件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前言<br>我们在使用git管理我们的代码和资源时候，经常会碰到一些文件或者目录不能提交到版本库，<br>但是项目里又不的没有这些文件或目录（待续…）</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>linux elementary OS 0.4 Loki<br>git version 2.7.4</p>
+<h2 id="忽略文件的几种方法"><a href="#忽略文件的几种方法" class="headerlink" title="忽略文件的几种方法"></a>忽略文件的几种方法</h2><p>[方法一] 配置.gitignore</p>
+<p>在仓库目录下新建.gitignore文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ touch .gitignore</div></pre></td></tr></table></figure></p>
+<p>编辑 .gitignore 文件增加忽略项<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim .gitignore</div></pre></td></tr></table></figure></p>
+<p>.gitignore文件对其所在的目录及所在目录的全部子目录均有效。通过将.gitignore文件添加到仓库，<br>其他开发者更新该文件到本地仓库，以共享同一套忽略规则</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lixiaobing.github.io/2017/05/02/gitignore/" data-id="cj2clli3l0000cttzv7bkx1ra" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vim-useage1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/27/vim-useage1/" class="article-date">
+  <time datetime="2017-04-27T09:09:05.000Z" itemprop="datePublished">2017-04-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/27/vim-useage1/">vim使用（基础篇）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文介绍vim的基础使用方法<br>模式切换<br>打开文件<br>关闭文件<br>光标移动</p>
+</blockquote>
+<h2 id="1-模式切换"><a href="#1-模式切换" class="headerlink" title="1. 模式切换"></a>1. 模式切换</h2><pre><code>三种常用的模式
+1.编辑模式（命令模式）
+2.输入模式
+3.末行模式
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">i</td>
+<td style="text-align:center">在当前光标所在的字符前面，转换为输入模式</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">a</td>
+<td style="text-align:center">在当前光标所在字符的后面，转换为输入模式</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">在当前光标所在行的下方，新建一行，并转换为输入模式</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">I</td>
+<td style="text-align:center">在当前光标所在的行首，转换为输入模式</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">在当前光标所在的行的行尾，转换为输入模式</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">O</td>
+<td style="text-align:center">在当前光标所在行的上方，新建一行，并转换为输入模式</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">:</td>
+<td style="text-align:center">由编辑模式转换为末行模式</td>
+</tr>
+<tr>
+<td style="text-align:center">输入模式</td>
+<td style="text-align:center">ESC</td>
+<td style="text-align:center">由输入模式转换为编辑模式</td>
+</tr>
+<tr>
+<td style="text-align:center">末行模式</td>
+<td style="text-align:center">ESC,ESC</td>
+<td style="text-align:center">由末行模式转换为编辑模式</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-打开文件"><a href="#2-打开文件" class="headerlink" title="2. 打开文件"></a>2. 打开文件</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">vim filename</td>
+<td style="text-align:center">打开文件并定位于第1行</td>
+</tr>
+<tr>
+<td style="text-align:left">vim filename + #</td>
+<td style="text-align:center">打开文件并定位于第#行</td>
+</tr>
+<tr>
+<td style="text-align:left">vim filename +</td>
+<td style="text-align:center">打开文件并定位于最后一行</td>
+</tr>
+<tr>
+<td style="text-align:left">vim filename + /pattern</td>
+<td style="text-align:center">打开文件并定位至第一次被pattern匹配到的行的首行</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：默认处于编辑模式</p>
+</blockquote>
+<h2 id="3-关闭文件"><a href="#3-关闭文件" class="headerlink" title="3. 关闭文件"></a>3. 关闭文件</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">行末模式</td>
+<td style="text-align:center">:q</td>
+<td style="text-align:center">退出</td>
+</tr>
+<tr>
+<td style="text-align:center">行末模式</td>
+<td style="text-align:center">:wq</td>
+<td style="text-align:center">保存并退出</td>
+</tr>
+<tr>
+<td style="text-align:center">行末模式</td>
+<td style="text-align:center">:q!</td>
+<td style="text-align:center">不保存退出</td>
+</tr>
+<tr>
+<td style="text-align:center">行末模式</td>
+<td style="text-align:center">:w</td>
+<td style="text-align:center">保存</td>
+</tr>
+<tr>
+<td style="text-align:center">行末模式</td>
+<td style="text-align:center">:w!</td>
+<td style="text-align:center">强行保存</td>
+</tr>
+<tr>
+<td style="text-align:center">行末模式</td>
+<td style="text-align:center">:x</td>
+<td style="text-align:center">同wq</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">ZZ</td>
+<td style="text-align:center">保存并退出</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-移动光标（编辑模式）"><a href="#4-移动光标（编辑模式）" class="headerlink" title="4 .移动光标（编辑模式）"></a>4 .移动光标（编辑模式）</h2><h4 id="1-以字符为单位移动"><a href="#1-以字符为单位移动" class="headerlink" title="1.  以字符为单位移动"></a>1.  以字符为单位移动</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">h</td>
+<td style="text-align:center">左移一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">l</td>
+<td style="text-align:center">右移一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">j</td>
+<td style="text-align:center">下移一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">k</td>
+<td style="text-align:center">上移一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">#h</td>
+<td style="text-align:center">左移#个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">#l</td>
+<td style="text-align:center">右移#个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">#j</td>
+<td style="text-align:center">下移#个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">#k</td>
+<td style="text-align:center">上移#个字符</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-以单词为单位移动"><a href="#2-以单词为单位移动" class="headerlink" title="2.  以单词为单位移动"></a>2.  以单词为单位移动</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">w</td>
+<td style="text-align:center">移至下一个单词的词首</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">e</td>
+<td style="text-align:center">跳至当前或下一个单词的词尾</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">b</td>
+<td style="text-align:center">跳至当前或钱一个单词的词首</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">#w</td>
+<td style="text-align:center">移动#个单词</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-行内跳转"><a href="#3-行内跳转" class="headerlink" title="3.  行内跳转"></a>3.  行内跳转</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">绝对行首</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">^</td>
+<td style="text-align:center">行首的第一个非空白字符</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">\$</td>
+<td style="text-align:center">绝对行末</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">4.</td>
+<td style="text-align:center">行间跳转</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">#</td>
+<td style="text-align:center">跳转至第#行</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">gg</td>
+<td style="text-align:center">第一行</td>
+</tr>
+<tr>
+<td style="text-align:center">编辑模式</td>
+<td style="text-align:center">G</td>
+<td style="text-align:center">最有一行</td>
+</tr>
+<tr>
+<td style="text-align:center">末行模式</td>
+<td style="text-align:center">.</td>
+<td style="text-align:center">表示当前行</td>
+</tr>
+<tr>
+<td style="text-align:center">末行模式</td>
+<td style="text-align:center">\$</td>
+<td style="text-align:center">最后一行</td>
+</tr>
+<tr>
+<td style="text-align:center">末行模式</td>
+<td style="text-align:center">#</td>
+<td style="text-align:center">第#行</td>
+</tr>
+<tr>
+<td style="text-align:center">末行模式</td>
+<td style="text-align:center">+#</td>
+<td style="text-align:center">向下的#行</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lixiaobing.github.io/2017/04/27/vim-useage1/" data-id="cj2clli4a0003cttz3tti6yxd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/26/hello-world/" class="article-date">
+  <time datetime="2017-04-26T07:33:52.000Z" itemprop="datePublished">2017-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/26/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lixiaobing.github.io/2017/04/26/hello-world/" data-id="cj2clli3x0001cttz8dvlcxvo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/02/gitignore/">git如何忽略文件</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/27/vim-useage1/">vim使用（基础篇）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/26/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 李大锤子<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
