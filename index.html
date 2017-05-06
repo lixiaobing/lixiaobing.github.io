@@ -94,15 +94,19 @@
 <ul>
 <li>[方式二] 配置.git/info/exclude文件</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ vim .git/info/exclude</div><div class="line">``` </div><div class="line">```bash</div><div class="line">git ls-files --others --exclude-from=.git/info/exclude</div><div class="line">Lines that start with <span class="string">'#'</span> are comments.</div><div class="line">For a project mostly <span class="keyword">in</span> C, the following would be a good <span class="built_in">set</span> of</div><div class="line">exclude patterns (uncomment them <span class="keyword">if</span> you want to use them):</div><div class="line">*.[oa]</div><div class="line">*~</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ vim .git/info/exclude</div><div class="line">``` </div><div class="line"></div><div class="line">```bash</div><div class="line">git ls-files --others --exclude-from=.git/info/exclude</div><div class="line">Lines that start with <span class="string">'#'</span> are comments.</div><div class="line">For a project mostly <span class="keyword">in</span> C, the following would be a good <span class="built_in">set</span> of</div><div class="line">exclude patterns (uncomment them <span class="keyword">if</span> you want to use them):</div><div class="line">*.[oa]</div><div class="line">*~</div></pre></td></tr></table></figure>
 <p>这种方式对仓库全局有效，只能对自己本地仓库有作用，其他人没办法通过这种方式来共享忽略规则，除非他人也修改其本地仓库的该文件。</p>
 <h2 id="方式三"><a href="#方式三" class="headerlink" title="[方式三]"></a>[方式三]</h2><pre><code>通过.git/config配置文件的core. Excludesfile选项，指定一个忽略规则文件（完整路径），如下图所示。忽略规则在文件e:/gitignore.txt中（当然该文件名可以任意取）。
 该方式的作用域是也全局的。
-</code></pre>
+</code></pre><ul>
+<li>配置说明<br># 忽略<em>.o和</em>.a文件<br><em>.[oa]<br># 忽略</em>.b和<em>.B文件，my.b除外
+</em>.[bB]<br>!my.b<br># 忽略dbg文件和dbg目录<br>dbg<br># 只忽略dbg目录，不忽略dbg文件<br>dbg/<br># 只忽略dbg文件，不忽略dbg目录<br>dbg<br>!dbg/<br># 只忽略当前目录下的dbg文件和目录，子目录的dbg不在忽略范围内<br>/dbg</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lixiaobing.github.io/2017/05/02/gitignore/" data-id="cj2cnwxs80000oetz4r4tt8ho" class="article-share-link">Share</a>
+      <a data-url="https://lixiaobing.github.io/2017/05/02/gitignore/" data-id="cj2co1vhz0000p8tzfahkpup5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -427,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lixiaobing.github.io/2017/04/27/vim-useage1/" data-id="cj2cnwxsz0003oetz0jnaloz3" class="article-share-link">Share</a>
+      <a data-url="https://lixiaobing.github.io/2017/04/27/vim-useage1/" data-id="cj2co1viq0003p8tzif8btmp0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -475,7 +479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lixiaobing.github.io/2017/04/26/hello-world/" data-id="cj2cnwxsm0001oetz0sc2ogb9" class="article-share-link">Share</a>
+      <a data-url="https://lixiaobing.github.io/2017/04/26/hello-world/" data-id="cj2co1vie0001p8tz81736or4" class="article-share-link">Share</a>
       
       
     </footer>

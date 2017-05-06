@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://lixiaobing.github.io/2017/05/02/gitignore/index.html">
 <meta property="og:site_name" content="我的BLOG">
 <meta property="og:description" content="我们在使用git管理我们的代码工程，有时有的文件是不希望上传到版本库的，如项目编译生成的临时文件或调试时的配置等等，每次commit 的时候都需要把这些文件排除在外，非常麻烦。其实我们可以吧这写文件忽略掉，本文介绍几种忽略文件的方法 环境linux elementary OS 0.4 Lokigit version 2.7.4  [方法一] 配置.gitignore  在仓库目录下新建.gitig">
-<meta property="og:updated_time" content="2017-05-06T02:40:39.316Z">
+<meta property="og:updated_time" content="2017-05-06T02:44:31.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git如何忽略文件">
 <meta name="twitter:description" content="我们在使用git管理我们的代码工程，有时有的文件是不希望上传到版本库的，如项目编译生成的临时文件或调试时的配置等等，每次commit 的时候都需要把这些文件排除在外，非常麻烦。其实我们可以吧这写文件忽略掉，本文介绍几种忽略文件的方法 环境linux elementary OS 0.4 Lokigit version 2.7.4  [方法一] 配置.gitignore  在仓库目录下新建.gitig">
@@ -97,15 +97,19 @@
 <ul>
 <li>[方式二] 配置.git/info/exclude文件</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ vim .git/info/exclude</div><div class="line">``` </div><div class="line">```bash</div><div class="line">git ls-files --others --exclude-from=.git/info/exclude</div><div class="line">Lines that start with <span class="string">'#'</span> are comments.</div><div class="line">For a project mostly <span class="keyword">in</span> C, the following would be a good <span class="built_in">set</span> of</div><div class="line">exclude patterns (uncomment them <span class="keyword">if</span> you want to use them):</div><div class="line">*.[oa]</div><div class="line">*~</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ vim .git/info/exclude</div><div class="line">``` </div><div class="line"></div><div class="line">```bash</div><div class="line">git ls-files --others --exclude-from=.git/info/exclude</div><div class="line">Lines that start with <span class="string">'#'</span> are comments.</div><div class="line">For a project mostly <span class="keyword">in</span> C, the following would be a good <span class="built_in">set</span> of</div><div class="line">exclude patterns (uncomment them <span class="keyword">if</span> you want to use them):</div><div class="line">*.[oa]</div><div class="line">*~</div></pre></td></tr></table></figure>
 <p>这种方式对仓库全局有效，只能对自己本地仓库有作用，其他人没办法通过这种方式来共享忽略规则，除非他人也修改其本地仓库的该文件。</p>
 <h2 id="方式三"><a href="#方式三" class="headerlink" title="[方式三]"></a>[方式三]</h2><pre><code>通过.git/config配置文件的core. Excludesfile选项，指定一个忽略规则文件（完整路径），如下图所示。忽略规则在文件e:/gitignore.txt中（当然该文件名可以任意取）。
 该方式的作用域是也全局的。
-</code></pre>
+</code></pre><ul>
+<li>配置说明<br># 忽略<em>.o和</em>.a文件<br><em>.[oa]<br># 忽略</em>.b和<em>.B文件，my.b除外
+</em>.[bB]<br>!my.b<br># 忽略dbg文件和dbg目录<br>dbg<br># 只忽略dbg目录，不忽略dbg文件<br>dbg/<br># 只忽略dbg文件，不忽略dbg目录<br>dbg<br>!dbg/<br># 只忽略当前目录下的dbg文件和目录，子目录的dbg不在忽略范围内<br>/dbg</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lixiaobing.github.io/2017/05/02/gitignore/" data-id="cj2cnwxs80000oetz4r4tt8ho" class="article-share-link">Share</a>
+      <a data-url="https://lixiaobing.github.io/2017/05/02/gitignore/" data-id="cj2co1vhz0000p8tzfahkpup5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
